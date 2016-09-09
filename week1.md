@@ -46,6 +46,13 @@ Small differences in starting conditions can influence direction and endpoint in
 
 Repeatedly take the differential of $J(\theta_0,\theta_1)$ times a learning rate until the result converges.
 
+```Matlab
+h = X * theta;
+errors = h - y;
+
+delta = alpha/m * (X' * errors);
+theta = theta - delta;
+```
 ## Gradient Descent Learning Rate
 
 
