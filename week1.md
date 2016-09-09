@@ -44,7 +44,7 @@ Like walking down a hill using the steepest way until we can go no lower.
 
 Small differences in starting conditions can influence direction and endpoint in complex ways.
 
-Repeatedly take the differential of $J(\theta_0,\theta_1)$ times a learning rate until the result converges.
+Repeatedly take the differential of $$J(\theta_0,\theta_1)$$ times a learning rate until the result converges.
 
 ```matlab
 h = X * theta;
@@ -53,6 +53,7 @@ errors = h - y;
 delta = alpha/m * (X' * errors);
 theta = theta - delta;
 ```
+
 ## Gradient Descent Learning Rate
 
 
@@ -68,4 +69,4 @@ Gradient descent will converge even if $$\alpha$$ is held fixed, as the closer t
 
 The cost function for linear regression is *convex*, meaning it only has a single, global, optimum.
 
-For so-called "batch" gradient descent we use all the training examples $(m)$ every step. Other times we only use a subset of the training examples for gradient descent.
+For so-called "batch" gradient descent we use all the training examples $$(m)$$ every step. Other times we only use a subset of the training examples for gradient descent.
