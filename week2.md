@@ -74,3 +74,30 @@ $$\frac{\partial}{\partial \theta_j} J(\theta) = ...$$ for every $$j$$
 $$
 J(\theta_0,\theta_1,...,\theta_m) = \frac{1}{2m}\sum_{k=1}^m(h_\theta(x^{\left(i\right)} - y^{\left(i\right)})^2
 $$ The derivation is involved.
+
+### Example
+| | size ft$$^2$$  | # of bedrooms | # of floors | age (years) | price ($1000)|
+| :------------- | :------------- | :------------- | :------------- | :------------- | :------------- |
+| $$x_0$$ | $$x_1$$ | $$x_2$$ | $$x_3$$ | $$x_4$$ | $$y$$ |
+| 1       | 2104 | 5 | 1 | 45 | 450 |
+| 1       | 1416 | 3 | 2 | 40 | 232 |
+| 1       | 1534 | 3 | 2 | 30 | 315 |
+| 1       | 852  | 2 | 1 | 45 | 178 |
+
+$$
+X  = \left[\begin{matrix}
+1 & 2104 & 5 & 1 & 45 \cr
+1 & 1416 & 3 & 2 & 40 \cr
+1 & 1534 & 3 & 2 & 30 \cr
+1 & 852 & 2 & 1 & 36
+\end{matrix} \right]
+y =\left[\begin{matrix}
+460 \cr 232 \cr 315 \cr 178
+\end{matrix}\right]
+$$
+$$X$$ is $$m$$x$$n+1$$, $$y$$ is m-dimensional and
+$$\theta(X^{T}X)^{-1}X^{T}y $$
+```MatLab
+pinv(X'*X)*X'*y
+```
+No need to use features scaling with gradient descent.
