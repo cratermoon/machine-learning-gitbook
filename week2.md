@@ -51,3 +51,26 @@ Example $$x_1 \leftarrow \dfrac{(x_1- \mu_1)}{\sigma_1}$$
 
 ### Debugging Learning Rate
 Plot $$J\left(\theta\right)$$ as a function of the number of iterations to get the value of the cost function after each iteration. The value should decrease after every iteration at a rate that is not too slow.  If the plot shows $$J\left(\theta\right)$$ increasing then the gradient descent is not working, so use a smaller $$\alpha$$. If the it is decreasing slowly, use a larger $$\alpha$$. Tip: use values that differ by about a factor of 3: 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1, 3....
+
+## Features and Polynomial Regression
+
+Housing price prediction features:
+$$h_\theta(x) = \theta_0 + \theta_1 * frontage + \theta_2*depth$$
+
+New feature Area X = frontage * depth then quadratic is a better fit than a straight line.
+
+Polynomial regression
+$$\theta_0 + \theta_1x + \theta_2x^2 + \theta_3x^3$$ where $$x_1 = size, x_2 = size^2, x_3 = size^3$$  makes it *very* important to use feature scaling
+as $$x_1 = 1-1000; x^2=1-1,000,000, \text{and} x^3 = 1-10^9$$
+
+## Normal Equation
+For some linear regression problems the normal euqatoin will giv us a much better ay to solve for the optimal value of $$\theta$$.  While Gradient Descent takes many iterations, the normal equation solves it in one step.
+
+Intuitively, for a 1-dimensional $$\theta \in \mathbb R$$, or scalar:
+$$J(\theta) = a\theta^2 +b\theta +c$$ then we set the derivative $$\frac{d}{d\theta}J(\theta)$$ to 0 and solve for $$\theta$$. When $$\theta \in \mathbb R^n+1$$ we must use the partial derivative.
+
+$$\frac{\partial}{\partial \theta_j} J(\theta) = ...$$ for every $$j$$
+
+$$
+J(\theta_0,\theta_1,...,\theta_m) = \frac{1}{2m}\sum_{k=1}^m(h_\theta(x^{\left(i\right)} - y^{\left(i\right)})^2
+$$ The derivation is involved.
