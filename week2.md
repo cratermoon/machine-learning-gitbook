@@ -95,8 +95,10 @@ y =\left[\begin{matrix}
 460 \cr 232 \cr 315 \cr 178
 \end{matrix}\right]
 $$
-$$X$$ is $$m$$x$$n+1$$, $$y$$ is m-dimensional and
-$$\theta(X^{T}X)^{-1}X^{T}y $$
+$$X$$ is $$m$$x$${n+1}$$, $$y$$ is m-dimensional and
+$$\theta = (X^{T}X)^{-1}X^{T}y $$
+
+We use ```pinv``` in case $$X^TX$$ is *noninvertible*: features are linearly dependent or $$m\le n$$. Delete features or use regularization.
 ```MatLab
 pinv(X'*X)*X'*y
 ```
