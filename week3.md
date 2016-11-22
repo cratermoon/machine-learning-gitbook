@@ -57,10 +57,33 @@ When exactly is $$h_\theta\left(x\right) \ge 0.5$$?
 $$g(x) \ge 0.5$$ when $$z \ge 0$$
 $$h_\theta(x) = g(\theta^\intercal) \ge 0.5 $$ whenever $$ \theta^\intercal x \ge 0$$ when $$ z = \theta^\intercal x$$
 
-The decision boundary is a property of the hypothesis and the parameters **not** the training set.
+The decision boundary is a property of the hypothesis and the parameters, **not** the training set.
+
+Given $$\theta = \left[\begin{matrix}-3 \cr 1 \cr  1\end{matrix} \right]$$
+
+then $$y = 1$$ if $$-3 + x_1 + x_2 \ge 0$$ and $$-3 + x_1 + x_2 = \theta^\intercal x$$
+
+The line  $$x_1 + x_2 = 3$$ is the Decision Boundary.
+
+The Decision Boundary will become important later when we study SVMs and the kernel trick.
+
+Non-linear decision boundaries and polynomial logistic regression.
+
+$$h_\theta(x) = g\left(\theta_0 + \theta_1x_1 + \theta_2x_2 + \theta_3x^2_1 + \theta_4x^2_2\right)$$
+
+Higher-order polynomials allow for more complex shaped decision boundaries.
 ## Logistic Regression Model
 
 ### Cost Function
+Cost function can be simplified as $$Cost(h_\theta(x),y) = \dfrac{1}{2}\left(h_\theta(x) -y\right)^2 $$
+
+And
+$$
+\begin{cases}
+-log \left(h_\theta(x)\right) \text{if } y = 1 \\
+-log\left(1 - h_\theta(x)\right) \text{if } y = 0
+\end{cases}
+$$
 ### Simplified Cost Function and Gradient Descent
 ### Advanced Optimization
 
