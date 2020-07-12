@@ -71,9 +71,9 @@ $$J(\theta) = a\theta^2 +b\theta +c$$ then we set the derivative $$\frac{d}{d\th
 
 $$\frac{\partial}{\partial \theta_j} J(\theta) = ...$$ for every $$j$$
 
-$$
-J(\theta_0,\theta_1,...,\theta_m) = \frac{1}{2m}\sum_{k=1}^m(h_\theta(x^{\left(i\right)} - y^{\left(i\right)})^2
-$$ The derivation is involved.
+$$J(\theta_0,\theta_1,...,\theta_m) = \frac{1}{2m}\sum_{k=1}^m(h_\theta(x^{\left(i\right)} - y^{\left(i\right)})^2$$
+
+The derivation is involved.
 
 ### Example
 | | size ft$$^2$$  | # of bedrooms | # of floors | age (years) | price ($1000)|
